@@ -1,0 +1,953 @@
+/*
+ * HTML5 Boilerplate
+ *
+ * What follows is the result of much research on cross-browser styling.
+ * Credit left inline and big thanks to Nicolas Gallagher, Jonathan Neal,
+ * Kroc Camen, and the H5BP dev community and team.
+ */
+
+/* ==========================================================================
+   Base styles: opinionated defaults
+   ========================================================================== */
+
+html,
+button,
+input,
+select,
+textarea {
+    color: #222;
+}
+
+body {
+    font-size: 1em;
+    line-height: 1.4;
+}
+
+/*
+ * Remove text-shadow in selection highlight: h5bp.com/i
+ * These selection declarations have to be separate.
+ * Customize the background color to match your design.
+ */
+
+::-moz-selection {
+    background: #b3d4fc;
+    text-shadow: none;
+}
+
+::selection {
+    background: #b3d4fc;
+    text-shadow: none;
+}
+
+/*
+ * A better looking default horizontal rule
+ */
+
+hr {
+    display: block;
+    height: 1px;
+    border: 0;
+    border-top: 1px solid #ccc;
+    margin: 1em 0;
+    padding: 0;
+}
+
+/*
+ * Remove the gap between images and the bottom of their containers: h5bp.com/i/440
+ */
+
+img {
+    vertical-align: middle;
+}
+
+/*
+ * Remove default fieldset styles.
+ */
+
+fieldset {
+    border: 0;
+    margin: 0;
+    padding: 0;
+}
+
+/*
+ * Allow only vertical resizing of textareas.
+ */
+
+textarea {
+    resize: vertical;
+}
+
+/* ==========================================================================
+   Chrome Frame prompt
+   ========================================================================== */
+
+.chromeframe {
+    margin: 0.2em 0;
+    background: #ccc;
+    color: #000;
+    padding: 0.2em 0;
+}
+
+/* ==========================================================================
+   Author's custom styles
+   ========================================================================== */
+
+/*global*/
+
+.container{
+	width: 1080px;
+	padding: 0 10px;
+	max-width: 100%;
+	/*min-width: 700px; temp*/
+	margin: auto;
+}
+
+body{
+	font-family: "Century Gothic";
+}
+
+/*header*/
+
+#header{
+	display: block;
+	width: 100%;
+	/*min-width: 700px; /*temp*/
+	height: 80px;
+	top: 0;
+	position: relative;
+
+	background: black;
+	border-top: 3px solid #000;
+
+	-webkit-box-shadow: 0 1px 5px -1px rgba(0,0,0,.4);
+	-moz-box-shadow: 0 1px 5px -1px rgba(0,0,0,.4);
+	box-shadow: 0 1px 5px -1px rgba(0,0,0,.4);
+}
+
+#headeri{
+	position: relative;
+	width: 1000px;
+	margin-left: 100px;
+}
+
+#headerl{
+	position: relative;
+	display:inline-block;
+	height: 70px;
+	top: -25px;
+}
+
+#headern1{
+	position: relative;
+	display: inline-block;
+	top:-10px;
+	
+	font-family:'Century Gothic';
+	font-size: 40px; 
+	font-weight:100; 
+	color: #ccc;	
+}
+
+#headern2{
+	position: relative;
+	display: inline-block;
+	top: -10px;
+	margin-left: 5px;
+	
+	font-family:'Century Gothic';
+	font-size: 17px; 
+	font-weight:100; 
+	color: #ccc;	
+}
+
+.headernav{
+	padding-right: 25px;	
+}
+
+.headerlinks{	
+	color: white;
+    text-decoration: none;
+	
+    transition: color .3s;
+    -moz-transition: color .3s; /* Firefox 4 */
+    -webkit-transition: color .3s; /* Safari and Chrome */
+    -o-transition: color .3s; /* Opera */
+}
+
+.headerlinks:hover,.headerlinks.selected{
+    color: #ea4848;
+}
+
+#menu{	
+	position: relative;
+	width: 700px;
+	top: -90px;
+	left: 475px;
+    font-size: 1.1em;
+}
+#menu ul{
+    margin: 0;
+    padding: 20px 0;
+}
+#menu ul li{
+    display: inline-block;
+    margin-right: 40px;
+}
+
+.socialicon{
+	opacity: 0.7;
+	
+	margin-right: -15px;
+	
+	transition: 1s;
+	-moz-transition: 1s; /* Firefox 4 */
+    -webkit-transition: 1s; /* Safari and Chrome */
+    -o-transition: 1s; /* Opera */
+}
+
+.socialicon:hover{
+	opacity: 1;
+}
+
+/*footer*/
+
+#footer{
+	position: fixed;
+    display: block;
+    width: 100%;
+    background: black;
+    height: 40px;
+	bottom: 0;
+}
+
+/*Index page AKA homepage*/
+
+#homepage { 
+	background: url(../img/bg.jpg) no-repeat center center fixed; 
+	-webkit-background-size: cover;
+	-moz-background-size: cover;
+	-o-background-size: cover;
+	background-size: cover;
+}
+
+#indexc1{
+	font-family:'Century Gothic'; 
+	font-size: 25px;
+	color: #00ff00;
+}
+
+#kslogo{
+	width: 175px; 
+	border-radius: 10px; 
+	margin-bottom: 10px; 
+	opacity: 0.7;
+
+	transition: 0.5s;
+	-moz-transition: 0.5s; /* Firefox 4 */
+    -webkit-transition: 0.5s; /* Safari and Chrome */
+    -o-transition: 0.5s; /* Opera */
+}
+
+#kslogo:hover{
+	opacity: 1;
+}
+
+#contenti{
+    position: absolute;
+    top: 100px;
+    left: 70px;
+	
+    padding: 15px;
+	padding-top: 0px;
+    width: 400px;
+    height: 470px;
+	
+    text-align: center;
+	
+    color: #fff;
+    background: rgba(0,0,0,.5);
+    border: 1px solid rgba(255,255,255,.2);
+
+    -webkit-border-radius: 14px 14px 0px 0px;
+    -moz-border-radius: 14px 14px 0px 0px;
+    border-radius: 14px 14px 0px 0px;
+}
+
+#contenti h1{
+	font-weight: 100;
+}
+
+#email{
+	display: block;
+	padding: 9px;
+	width: 220px;
+	padding-right: 110px;
+	
+	margin-left: auto;
+	margin-right: auto;
+	
+	-webkit-border-radius: 4px;
+    -moz-border-radius: 4px;
+    border-radius: 4px;
+}
+
+#content input#email{
+    border: none;
+    opacity: .99;
+    -moz-border-radius: 4px;
+    -webkit-border-radius: 4px;
+    border-radius: 4px;
+
+    background-color: rgba(39, 39, 39, 0.9);
+
+    -moz-box-shadow:
+        0 1px 0 rgba(255,255,255,.08),
+        inset 0 1px 2px rgba(0,0,0,.22);
+    -webkit-box-shadow:
+        0 1px 0 rgba(255,255,255,.08),
+        inset 0 1px 2px rgba(0,0,0,.22);
+    box-shadow:
+        0 1px 0 rgba(255,255,255,.08),
+        inset 0 1px 2px rgba(0,0,0,.22);
+
+    
+    padding: 12px 100px 12px 10px;
+    width: 100%;
+    color: #222;
+
+}
+
+#contenti input#email:focus{
+    box-shadow: 0 1px 0 rgba(255,255,255,0.2), inset 0 1px 1px rgba(0,0,0,0.1), 0 0 0 3px rgba(255,255,255,0.15);
+    background: rgba(255, 255, 255, 0.9);
+    outline: none;
+
+    transition: all .3s;
+    -moz-transition: all .3s; /* Firefox 4 */
+    -webkit-transition: all .3s; /* Safari and Chrome */
+    -o-transition: all .3s; /* Opera */
+}
+
+#contenti input#email::-webkit-input-placeholder {
+    color: #656565;
+    text-shadow: 0 1px 1px rgba(0,0,0,.25);
+}
+
+#contenti input#email:-moz-placeholder {
+    color: #656565;
+    text-shadow: 0 1px 1px rgba(0,0,0,.25);
+}
+
+#contenti input#email:focus:-ms-input-placeholder {
+    color: #656565;
+    text-shadow: 0 1px 1px rgba(0,0,0,.25);
+}
+
+#contenti input#email:focus::-webkit-input-placeholder {
+    text-shadow: none;
+}
+
+#contenti input#email:focus:-moz-placeholder {
+    text-shadow: none;
+}
+
+#contenti input#email:focus:-ms-input-placeholder {
+    text-shadow: none;
+}
+
+/*button styling*/
+.button {
+    position: relative;
+	top: -35px;
+	left: 118px;
+    border: none; 
+	
+	font-weight: bold;
+    color: #fff;
+    text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.5);
+    font-size: 12px;
+    line-height: 20px;
+    padding: 5px 12px;
+    -webkit-border-radius: 1px;
+    border-radius: 1px;
+    position: relative;
+    margin: 0 10px 10px 0;
+}
+
+.button:after {
+    position: absolute;
+    display: block;
+    content: "";
+    top: -1px;
+    left: -1px;
+    right: -1px;
+    bottom: -1px;
+    z-index: -1;
+    -webkit-border-radius: 2px;
+    border-radius: 2px;
+    -webkit-box-shadow: 0 1px 2px rgba(0, 0, 0, 0.25);
+    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.25);
+}
+
+.button:active {
+    -webkit-box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.15), inset 0 0 1px rgba(0, 0, 0, 0.02) !important;
+    box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.15), inset 0 0 1px rgba(0, 0, 0, 0.02) !important;
+}
+
+.button:active:after {
+    -webkit-box-shadow: 0 1px 0 0 rgba(255, 255, 255, 0.5) !important;
+    box-shadow: 0 1px 0 0 rgba(255, 255, 255, 0.5) !important;
+}
+
+/*Azure Blue button*/
+.azure-button:hover {
+    -webkit-box-shadow: inset 0 0 0 1px rgba(255, 255, 255, 0.05), inset 0 1px 0 0 #71c3f6;
+    box-shadow: inset 0 0 0 1px rgba(255, 255, 255, 0.05), inset 0 1px 0 0 #71c3f6;
+    background-color: #5db5f4;
+    background-image: -webkit-gradient(linear, left top, left bottom, from(#5db5f4), to(#4193ef));
+    background-image: -webkit-linear-gradient(top, #5db5f4, #4193ef);
+    background-image: -moz-linear-gradient(top, #5db5f4, #4193ef);
+    background-image: -o-linear-gradient(top, #5db5f4, #4193ef);
+    background-image: -ms-linear-gradient(top, #5db5f4, #4193ef);
+    background-image: linear-gradient(top, #5db5f4, #4193ef);
+    filter: progid:DXImageTransform.Microsoft.gradient(GradientType=0,StartColorStr='#5db5f4', EndColorStr='#4193ef');
+}
+
+.azure-button {
+    -webkit-box-shadow: inset 0 0 0 1px rgba(255, 255, 255, 0.05), inset 0 1px 0 0 #64baf5;
+    box-shadow: inset 0 0 0 1px rgba(255, 255, 255, 0.05), inset 0 1px 0 0 #64baf5;
+}
+
+.azure-button,
+.azure-button:active {
+    background-color: #54abf2;
+    background-image: -webkit-gradient(linear, left top, left bottom, from(#54abf2), to(#3d8aed));
+    background-image: -webkit-linear-gradient(top, #54abf2, #3d8aed);
+    background-image: -moz-linear-gradient(top, #54abf2, #3d8aed);
+    background-image: -o-linear-gradient(top, #54abf2, #3d8aed);
+    background-image: -ms-linear-gradient(top, #54abf2, #3d8aed);
+    background-image: linear-gradient(top, #54abf2, #3d8aed);
+    filter: progid:DXImageTransform.Microsoft.gradient(GradientType=0,StartColorStr='#54abf2', EndColorStr='#3d8aed');
+}
+
+.azure-button:after {
+    background-color: #3187ed;
+    background-image: -webkit-gradient(linear, left top, left bottom, from(#3187ed), to(#204ce4));
+    background-image: -webkit-linear-gradient(top, #3187ed, #204ce4);
+    background-image: -moz-linear-gradient(top, #3187ed, #204ce4);
+    background-image: -o-linear-gradient(top, #3187ed, #204ce4);
+    background-image: -ms-linear-gradient(top, #3187ed, #204ce4);
+    background-image: linear-gradient(top, #3187ed, #204ce4);
+    filter: progid:DXImageTransform.Microsoft.gradient(GradientType=0,StartColorStr='#3187ed', EndColorStr='#204ce4');
+}
+
+.azure-button:active:after {
+    background-color: #2d79eb;
+    background-image: -webkit-gradient(linear, left top, left bottom, from(#2d79eb), to(#255be6));
+    background-image: -webkit-linear-gradient(top, #2d79eb, #255be6);
+    background-image: -moz-linear-gradient(top, #2d79eb, #255be6);
+    background-image: -o-linear-gradient(top, #2d79eb, #255be6);
+    background-image: -ms-linear-gradient(top, #2d79eb, #255be6);
+    background-image: linear-gradient(top, #2d79eb, #255be6);
+    filter: progid:DXImageTransform.Microsoft.gradient(GradientType=0,StartColorStr='#2d79eb', EndColorStr='#255be6');
+}
+
+#dotseparator{
+	position: relative;
+	top:2px;
+	 
+	font-size:18px; 
+	font-weight:bolder; 
+	color: white;
+}
+
+#index2{
+	position: absolute;
+	
+	height: 700px;
+	width: 500px;
+	top: 100px;
+
+	border: 1px solid red;
+}
+
+/*#kicktraq{
+	position: absolute; 
+	left: 530px; 
+	top:40px;
+	
+	opacity: 0.6;
+	
+	transition: 1s;
+	-moz-transition: 1s; 
+    -webkit-transition: 1s;
+    -o-transition: 1s; 
+}
+
+#kicktraq:hover{
+	opacity: 1;
+}*/
+
+#googlead1{
+	position: absolute;
+	top: 390px;
+	width: 620px;
+	left: 500px; 
+}
+
+#social{
+	position: relative;
+	display: inline-block;
+	top: -16px;
+}
+
+#press{
+	position: absolute;
+	display:inline-block;
+	top: 60px;
+	height: 220px;
+	left: 570px;
+	width: 570px;
+	padding: 25px;
+	
+	text-align: center;
+	font-size: 25px;
+	color: #666;
+    background: white;
+	opacity: 0.75;
+    border: 1px solid rgba(255,255,255,.2);
+
+    -webkit-border-radius: 14px 14px 0px 0px;
+    -moz-border-radius: 14px 14px 0px 0px;
+    border-radius: 14px 14px 0px 0px;
+}
+
+.presslogo{
+	margin-top: 10px;
+	opacity: 0.7;
+}
+
+.presslogo:hover{
+	opacity: 1;
+
+}
+
+/*video page*/
+
+#videopage { 
+	background: url(../img/bg2.jpg) no-repeat left center fixed; 
+	-webkit-background-size: auto;
+	-moz-background-size: auto;
+	-o-background-size: auto;
+	background-size: auto;
+}
+
+#contentv{
+	position: relative;
+	display: block;
+	width: 853px;
+	height: 480px;
+	left: 100px;
+	top: 20px;
+}
+
+#video{
+	position: absolute;
+	display: block;
+	
+	margin-left: auto;
+	margin-right: auto;
+}
+
+/*faq page*/
+
+#faqpage{ 
+	background: url(../img/bg3.jpg) no-repeat center center fixed; 
+	-webkit-background-size: cover;
+	-moz-background-size: cover;
+	-o-background-size: cover;
+	background-size: cover;
+	
+	height: inherit;
+}
+
+#contentf{
+	position: relative;
+	width: 800px;
+	top:50px;
+	
+	margin-left: auto;
+	margin-right: auto;
+	padding: 25px;
+	padding-left: 35px;
+	margin-bottom: 150px;
+	
+	background: black;
+	opacity: 0.7;
+	text-align: left;
+	
+	-webkit-border-radius: 14px 14px 0px 0px;
+    -moz-border-radius: 14px 14px 0px 0px;
+    border-radius: 14px 14px 0px 0px;
+}
+
+#contentf div a{
+	text-decoration: none;
+	color: white;
+}
+
+#contentf p{
+	color: #0096BB;
+	padding-left: 50px;
+}
+
+#note{
+	font-family: Arial, Helvetica, sans-serif;  
+	padding: 5px;
+	border: 0;
+	margin: 0;
+	color: #00ff00;
+}
+
+/*howtos page*/
+
+#howtos{ 
+	background: url(../img/bg4.jpg) no-repeat 50% 85% fixed; 
+	-webkit-background-size: cover;
+	-moz-background-size: cover;
+	-o-background-size: cover;
+	background-size: 2250px 1500px;
+}
+
+#contenth{
+	position: relative;
+	width: 1000px;
+	
+	margin-left: auto;
+	margin-right: auto;
+	
+	border: 1px solid red;
+}
+
+.transition {
+    -webkit-transition: all 2s;
+    -moz-transition: all 2s;
+    -o-transition: all 2s;
+    transition: all 2s;
+}
+
+#contenth h2{
+	position: relative;
+	display: block;
+	width: 500px;
+	padding: 5px;
+	background: #0096BB;
+	color: black;
+	
+	opacity: 0.85;
+	text-align: center;
+	left: 20px;
+	margin-top: 10px;
+	margin-bottom: 0;
+	
+	-webkit-border-radius: 5px 5px 0px 0px;
+    -moz-border-radius: 5px 5px 0px 0px;
+    border-radius: 5px 5px 0px 0px;
+}
+
+.howtosv{
+	position: relative;
+	top: -110px;	
+	
+	margin-bottom: 140px;
+	float: right;
+	
+	opacity: 0.85;
+}
+
+.howtosv2{
+	display: block;
+	width: 600px; 
+	height: 400px;
+}
+
+/*supporters page*/
+#supporterspage{ 
+	background: url(../img/bg3.jpg) no-repeat center center fixed; 
+	-webkit-background-size: cover;
+	-moz-background-size: cover;
+	-o-background-size: cover;
+	background-size: cover;
+	
+	height: inherit;
+	color: #FFFFFF;
+}
+
+#contents{
+	position: relative;
+	width: 800px;
+	top:50px;
+	
+	margin-left: auto;
+	margin-right: auto;
+	padding: 25px;
+	padding-left: 35px;
+	margin-bottom: 150px;
+	
+	background: black;
+	opacity: 0.7;
+	text-align: left;
+	
+	-webkit-border-radius: 14px 14px 0px 0px;
+    -moz-border-radius: 14px 14px 0px 0px;
+    border-radius: 14px 14px 0px 0px;
+}
+
+#contents div a{
+	text-decoration: none;
+	color: white;
+}
+
+.levelcol{
+	width: 170px;
+	color: #00B9E8;
+	vertical-align: text-top;
+	padding-left: 20px;
+	padding-bottom: 10px;
+	display: inline-block;
+	font-size: 15px;
+	font-weight: 100;
+}
+
+#note{
+	font-family: Arial, Helvetica, sans-serif; 
+	font-weight: 100;
+	padding: 5px;
+	border: 0;
+	margin: 0;
+	margin-left: 50px;
+	color: #00ff00;
+}
+
+#notetitle{
+	font-family: Arial, Helvetica, sans-serif; 
+	font-size: 18px; 
+	font-weight: 100;
+	padding: 5px;
+	border: 0;
+	margin: 0;
+	margin-left: 50px;
+	color: #00ff00;
+}
+
+#level{
+	font-size: 18px;
+	font-weight: 100;
+	text-decoration: underline;
+	border: 0;
+	margin: 0;
+	text-align: center;
+}
+
+#leveld{
+	font-size: 18px;
+	font-weight: 100;
+	text-decoration: underline;
+	border: 0;
+	margin: 0;
+	color:rgb(243,171,12);
+	text-align: center;
+}
+
+
+
+/* ==========================================================================
+   Helper classes
+   ========================================================================== */
+
+/*
+ * Image replacement
+ */
+
+.ir {
+    background-color: transparent;
+    border: 0;
+    overflow: hidden;
+    /* IE 6/7 fallback */
+    *text-indent: -9999px;
+}
+
+.ir:before {
+    content: "";
+    display: block;
+    width: 0;
+    height: 150%;
+}
+
+/*
+ * Hide from both screenreaders and browsers: h5bp.com/u
+ */
+
+.hidden {
+    display: none !important;
+    visibility: hidden;
+}
+
+/*
+ * Hide only visually, but have it available for screenreaders: h5bp.com/v
+ */
+
+.visuallyhidden {
+    border: 0;
+    clip: rect(0 0 0 0);
+    height: 1px;
+    margin: -1px;
+    overflow: hidden;
+    padding: 0;
+    position: absolute;
+    width: 1px;
+}
+
+/*
+ * Extends the .visuallyhidden class to allow the element to be focusable
+ * when navigated to via the keyboard: h5bp.com/p
+ */
+
+.visuallyhidden.focusable:active,
+.visuallyhidden.focusable:focus {
+    clip: auto;
+    height: auto;
+    margin: 0;
+    overflow: visible;
+    position: static;
+    width: auto;
+}
+
+/*
+ * Hide visually and from screenreaders, but maintain layout
+ */
+
+.invisible {
+    visibility: hidden;
+}
+
+/*
+ * Clearfix: contain floats
+ *
+ * For modern browsers
+ * 1. The space content is one way to avoid an Opera bug when the
+ *    `contenteditable` attribute is included anywhere else in the document.
+ *    Otherwise it causes space to appear at the top and bottom of elements
+ *    that receive the `clearfix` class.
+ * 2. The use of `table` rather than `block` is only necessary if using
+ *    `:before` to contain the top-margins of child elements.
+ */
+
+.clearfix:before,
+.clearfix:after {
+    content: " "; /* 1 */
+    display: table; /* 2 */
+}
+
+.clearfix:after {
+    clear: both;
+}
+
+/*
+ * For IE 6/7 only
+ * Include this rule to trigger hasLayout and contain floats.
+ */
+
+.clearfix {
+    *zoom: 1;
+}
+
+/* ==========================================================================
+   EXAMPLE Media Queries for Responsive Design.
+   Theses examples override the primary ('mobile first') styles.
+   Modify as content requires.
+   ========================================================================== */
+
+@media only screen and (min-width: 35em) {
+    /* Style adjustments for viewports that meet the condition */
+}
+
+@media print,
+       (-o-min-device-pixel-ratio: 5/4),
+       (-webkit-min-device-pixel-ratio: 1.25),
+       (min-resolution: 120dpi) {
+    /* Style adjustments for high resolution devices */
+}
+
+/* ==========================================================================
+   Print styles.
+   Inlined to avoid required HTTP connection: h5bp.com/r
+   ========================================================================== */
+
+@media print {
+    * {
+        background: transparent !important;
+        color: #000 !important; /* Black prints faster: h5bp.com/s */
+        box-shadow: none !important;
+        text-shadow: none !important;
+    }
+
+    a,
+    a:visited {
+        text-decoration: underline;
+    }
+
+    a[href]:after {
+        content: " (" attr(href) ")";
+    }
+
+    abbr[title]:after {
+        content: " (" attr(title) ")";
+    }
+
+    /*
+     * Don't show links for images, or javascript/internal links
+     */
+
+    .ir a:after,
+    a[href^="javascript:"]:after,
+    a[href^="#"]:after {
+        content: "";
+    }
+
+    pre,
+    blockquote {
+        border: 1px solid #999;
+        page-break-inside: avoid;
+    }
+
+    thead {
+        display: table-header-group; /* h5bp.com/t */
+    }
+
+    tr,
+    img {
+        page-break-inside: avoid;
+    }
+
+    img {
+        max-width: 100% !important;
+    }
+
+    @page {
+        margin: 0.5cm;
+    }
+
+    p,
+    h2,
+    h3 {
+        orphans: 3;
+        widows: 3;
+    }
+
+    h2,
+    h3 {
+        page-break-after: avoid;
+    }
+}
